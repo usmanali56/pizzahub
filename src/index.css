@@ -16,3 +16,16 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+@keyframes spin-clock {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-clock 8s linear infinite;
+  transform-origin: 50% 50%;
+}
