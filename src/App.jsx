@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection/HeroSection'
 import Menu from './components/Menu/Menu'
 import Service from './components/Service/Service'
 import Explore from './components/Explore/Explore'
+import Discover from './components/Discover/Discover'
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
       <Menu />
       <Service />
       <Explore />
+      <Discover />
     </div>
   )
 }
