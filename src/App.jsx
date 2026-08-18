@@ -6,6 +6,7 @@ import Service from './components/Service/Service'
 import Explore from './components/Explore/Explore'
 import Discover from './components/Discover/Discover'
 import Pizzapro from './components/Pizzapro/Pizzapro'
+import PizzaApproach from './components/PizzaApproach/PizzaApproach'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Explore />
       <Discover />
       <Pizzapro />
+      <PizzaApproach />
     </div>
   )
 }
