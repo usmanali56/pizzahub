@@ -10,6 +10,7 @@ import PizzaApproach from './components/PizzaApproach/PizzaApproach'
 import TestimonialSlider from './components/TestimonialSlider/TestimonialSlider'
 import BlogSection from './components/BlogSection/BlogSection'
 import PromoBanner from './components/PromoBanner/PromoBanner'
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
       <TestimonialSlider />
       <BlogSection />
       <PromoBanner />
+      <Footer />
     </div>
   )
 }
