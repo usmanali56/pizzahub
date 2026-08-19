@@ -9,6 +9,7 @@ import Pizzapro from './components/Pizzapro/Pizzapro'
 import PizzaApproach from './components/PizzaApproach/PizzaApproach'
 import TestimonialSlider from './components/TestimonialSlider/TestimonialSlider'
 import BlogSection from './components/BlogSection/BlogSection'
+import PromoBanner from './components/PromoBanner/PromoBanner'
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <PizzaApproach />
       <TestimonialSlider />
       <BlogSection />
+      <PromoBanner />
     </div>
   )
 }
