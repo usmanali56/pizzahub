@@ -8,6 +8,7 @@ import Discover from './components/Discover/Discover'
 import Pizzapro from './components/Pizzapro/Pizzapro'
 import PizzaApproach from './components/PizzaApproach/PizzaApproach'
 import TestimonialSlider from './components/TestimonialSlider/TestimonialSlider'
+import BlogSection from './components/BlogSection/BlogSection'
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
       <Pizzapro />
       <PizzaApproach />
       <TestimonialSlider />
+      <BlogSection />
     </div>
   )
 }
