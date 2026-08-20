@@ -39,48 +39,48 @@ const TestimonialSlider = () => {
     }
     const{name,location,desc,img,rating}=testimonials[currentIndex]
   return (
-    <div className='relative w-full min-h-[500px] flex items-center justify-center bg-cover bg-center py-16 px-4'
+    <div className='relative w-full min-h-[500px] flex items-center justify-center bg-cover bg-center py-10 sm:py-12 lg:py-16 px-3 sm:px-4'
     style={{ backgroundImage: `url(${bg})` }}>
       <div className="absolute inset-0 bg-black/50"></div>
 
       {/* Main content container */}
-      <div className='relative z-10 flex items-center justify-center w-full max-w-4xl gap-4 md:gap-8'>
+      <div className='relative z-10 flex items-center justify-center w-full max-w-4xl gap-2 sm:gap-4 md:gap-8'>
 {/* left navigation arrow */}
-<button onClick={prewSlide} className='w-12 h-12 flex items-center justify-center rounded-full bg-white text-[#d83a12] shadow-lg hover:scale-110 transition-transform cursor-pointer shrink-0 text-xl font-bold'>
+<button onClick={prewSlide} className='w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white text-[#d83a12] shadow-lg hover:scale-110 transition-transform cursor-pointer shrink-0 text-base sm:text-lg md:text-xl font-bold'>
 &#10094;
 </button>
 {/* testimonials card */}
-<div className='flex flex-col md:flex-row w-full max-w-3xl rounded-2xl overflow-hidden shadow-2xl bg-white'>
+<div className='flex flex-col md:flex-row w-full max-w-3xl rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl bg-white'>
     {/* left side content */}
-<div className='w-full md:w-1/2 bg-[#d83a12] p-4 md:p-6 flex items-center justify-center'>
-<div className='w-full h-72 md:h-80 overflow-hidden rounded-xl border-4 border-[#c0310e]'>
-<img src={img} alt={name} />
+<div className='w-full md:w-1/2 bg-[#d83a12] p-3 sm:p-4 md:p-6 flex items-center justify-center'>
+<div className='w-full h-48 sm:h-60 md:h-72 lg:h-80 overflow-hidden rounded-lg sm:rounded-xl border-2 sm:border-4 border-[#c0310e]'>
+<img src={img} alt={name} className='w-full h-full object-cover' />
 </div>
 </div>
 {/* right side content */}
-<div className='w-full md:w-1/2 bg-white p-8 md:p-10 flex flex-col justify-between text-center items-center'>
-<div className='text-[#d83a12] font-serif text-6xl font-bold leading-none select-none'>
+<div className='w-full md:w-1/2 bg-white p-5 sm:p-8 md:p-10 flex flex-col justify-between text-center items-center'>
+<div className='text-[#d83a12] font-serif text-4xl sm:text-5xl md:text-6xl font-bold leading-none select-none'>
 &ldquo;&ldquo;
 </div>
-<p className='text-gray-700 italic font-serif text-base md:text-lg leading-relaxed my-4'>
+<p className='text-gray-700 italic font-serif text-sm sm:text-base md:text-lg leading-relaxed my-3 sm:my-4'>
     {desc}
 </p>
-<div className='mt-2 flex flex-col items-center'>
-    <div className='flex gap-1 text-[#d83a12] text-lg mb-2'>
+<div className='mt-1 sm:mt-2 flex flex-col items-center'>
+    <div className='flex gap-1 text-[#d83a12] text-base sm:text-lg mb-2'>
 {[...Array(rating)].map((_, i) => (
                   <span key={i}>&#9733;</span>
                 ))}
     </div>
-<h4 className='font-bold text-gray-900 tracking-wider uppercase text-sm'>
+<h4 className='font-bold text-gray-900 tracking-wider uppercase text-xs sm:text-sm'>
 {name}
 </h4>
-<p className='text-xs text-gray-500 tracking-widest mt-1 uppercase font-medium'>{location}</p>
+<p className='text-[10px] sm:text-xs text-gray-500 tracking-widest mt-1 uppercase font-medium'>{location}</p>
 </div>
 </div>
 </div>
 <button
           onClick={nextSlide}
-          className="w-12 h-12 flex items-center justify-center rounded-full bg-white text-[#d83a12] shadow-lg hover:scale-110 transition-transform cursor-pointer shrink-0 text-xl font-bold"
+          className="w-9 h-9 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-white text-[#d83a12] shadow-lg hover:scale-110 transition-transform cursor-pointer shrink-0 text-base sm:text-lg md:text-xl font-bold"
         >
           &#10095;
         </button>

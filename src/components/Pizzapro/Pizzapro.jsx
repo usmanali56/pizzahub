@@ -8,7 +8,7 @@ const Pizzapro = () => {
         <img
           src={img}
           alt="3D Rotating Element"
-          className="w-[600px] h-[600px] object-contain animate-rotate-3d"
+          className="w-[280px] h-[280px] sm:w-[380px] sm:h-[380px] md:w-[480px] md:h-[480px] lg:w-[600px] lg:h-[600px] object-contain animate-rotate-3d"
         />
       </div>
       </div>

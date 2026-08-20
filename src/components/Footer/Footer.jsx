@@ -28,10 +28,10 @@ function Footer() {
         </div>
 
         {/* Main Footer Links Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-gray-800">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-gray-800">
           
           {/* Brand Info */}
-          <div className="lg:col-span-2">
+          <div className="col-span-2 lg:col-span-2">
             <h2 className="text-3xl font-black text-white tracking-wider mb-4 flex items-center gap-2">
               PIZZARO<span className="text-[#c83200]">.</span>
             </h2>
@@ -41,9 +41,9 @@ function Footer() {
             {/* Social Icons */}
             <div className="flex gap-3">
               {['Facebook', 'Instagram', 'Twitter', 'LinkedIn'].map((social, idx) => (
-                <a
-                  key={idx}
-                  href={`#${social.toLowerCase()}`}
+                
+                 <a key={idx}
+                 href={`#${social.toLowerCase()}`}
                   className="w-10 h-10 rounded-full bg-gray-800/80 hover:bg-[#c83200] text-white flex items-center justify-center text-xs font-semibold transition-colors"
                 >
                   {social[0]}
@@ -85,7 +85,7 @@ function Footer() {
           </div>
 
           {/* Column 3: Opening Hours & Contact */}
-          <div>
+          <div className="col-span-2 lg:col-span-1">
             <h4 className="text-white text-sm font-bold uppercase tracking-widest mb-5">
               Opening Hours
             </h4>
