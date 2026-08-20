@@ -1,6 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Footer() {
+  const quickLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Our Menu', path: '/menu' },
+    { name: 'Blogs', path: '/blog' },
+    { name: 'Contact Us', path: '/contact' },
+  ]
+
+  const legalLinks = [
+    { name: 'Privacy Policy', path: '/privacy' },
+    { name: 'Terms of Service', path: '/terms' },
+    { name: 'Cookie Policy', path: '/cookies' },
+    { name: 'Refund Policy', path: '/refund' },
+  ]
+
+  const socialLinks = [
+    { name: 'Facebook', path: 'https://facebook.com' },
+    { name: 'Instagram', path: 'https://instagram.com' },
+    { name: 'Twitter', path: 'https://twitter.com' },
+    { name: 'LinkedIn', path: 'https://linkedin.com' },
+  ]
+
   return (
     <footer className="bg-[#111111] text-gray-300 pt-16 pb-8 border-t border-gray-800 font-sans">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -40,13 +63,15 @@ function Footer() {
             </p>
             {/* Social Icons */}
             <div className="flex gap-3">
-              {['Facebook', 'Instagram', 'Twitter', 'LinkedIn'].map((social, idx) => (
+              {socialLinks.map((social, idx) => (
                 
                  <a key={idx}
-                 href={`#${social.toLowerCase()}`}
+                  href={social.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-gray-800/80 hover:bg-[#c83200] text-white flex items-center justify-center text-xs font-semibold transition-colors"
                 >
-                  {social[0]}
+                  {social.name[0]}
                 </a>
               ))}
             </div>
@@ -58,11 +83,11 @@ function Footer() {
               Quick Links
             </h4>
             <ul className="space-y-3 text-sm">
-              {['Home', 'About Us', 'Our Menu', 'Blogs', 'Contact Us'].map((item, idx) => (
+              {quickLinks.map((item, idx) => (
                 <li key={idx}>
-                  <a href={`#${item.toLowerCase().replace(' ', '')}`} className="hover:text-[#c83200] transition-colors">
-                    {item}
-                  </a>
+                  <Link to={item.path} className="hover:text-[#c83200] transition-colors">
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -74,11 +99,11 @@ function Footer() {
               Legal
             </h4>
             <ul className="space-y-3 text-sm">
-              {['Privacy Policy', 'Terms of Service', 'Cookie Policy', 'Refund Policy'].map((item, idx) => (
+              {legalLinks.map((item, idx) => (
                 <li key={idx}>
-                  <a href={`#${item.toLowerCase().replace(' ', '')}`} className="hover:text-[#c83200] transition-colors">
-                    {item}
-                  </a>
+                  <Link to={item.path} className="hover:text-[#c83200] transition-colors">
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -115,11 +140,11 @@ function Footer() {
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 gap-4">
           <p>&copy; 2026 Pizzaro. All rights reserved.</p>
           <p className="flex gap-4">
-            <a href="#privacy" className="hover:underline">Privacy</a>
+            <Link to="/privacy" className="hover:underline">Privacy</Link>
             <span>•</span>
-            <a href="#terms" className="hover:underline">Terms</a>
+            <Link to="/terms" className="hover:underline">Terms</Link>
             <span>•</span>
-            <a href="#cookies" className="hover:underline">Cookies</a>
+            <Link to="/cookies" className="hover:underline">Cookies</Link>
           </p>
         </div>
 
